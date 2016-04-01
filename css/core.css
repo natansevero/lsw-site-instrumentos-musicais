@@ -1,0 +1,50 @@
+header {
+  border: solid 2px #2622e3;
+  padding: 10px;
+  display: block;
+  position: relative;
+}
+
+.menu {
+  border: solid 2px rgb(223, 9, 9);
+  position: relative;
+}
+
+.menu img {
+  width: 48px;
+  height: 48px;
+  display: inline;
+}
+.menu ul{
+  display: inline;
+  position: absolute;
+  right: 0;
+}
+.menu ul li{
+  border: solid 2px black;
+  display: inline-block;
+}
+
+.produtos {
+  border: solid 2px black;
+  display: block;
+  padding: 20px;
+}
+
+.about {
+  border: solid 2px black;
+  display: block;
+  padding: 20px;
+}
+
+.contato {
+  border: solid 2px black;
+  display: block;
+  padding: 20px;
+}
+
+.footer {
+  border: solid 2px black;
+  display: block;
+  padding: 20px;
+}
