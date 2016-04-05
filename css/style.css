@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    position : relative; /* Por conta do "scrollspy" */
+}
+
+/*Color navbar*/
+
+.navbar {
+  background-color: #303183 !important;
+}
+
+/* Menu Responsivo */
+.navbar-nav li a{
+  color: white !important;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  background-color: #303183;
+  height: 80px;
+  padding-top: 26px !important;
+  margin-top: -8px;
+}
+
+/* Menu Responsivo */
+.navbar-nav li a:hover{
+  color: #303183 !important;
+  background-color: white !important;
+}
+
+.logo-site {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-mobile {
+  height: 80px;
+}
+
+/* Cabeçalho Menu Responsivo -> Aplica pequena distancia da Navbar para o Menu Responsivo */
+.navbar-header {
+  /*border: 2px solid black;*/
+  height: 80px;
+}
+
+/* Botão do menu responsivo*/
+.button-menu-mobile{
+  /*border: 2px solid black !important;*/
+  margin-top: 22px !important;
+}
+
+header {
+  margin-top: 80px;
+}
+
+/* Produtos */
+section.#produtos {
+  border: 2px solid black;
+  height: 2000px;
+}
+
+section#produtos h1 {
+  margin-top: 60px;
+  text-align: center;
+  color: #303183;
+}
+
+/* Comportamento da .box */
+.box {
+  /*border: 2px solid black;*/
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Comportamento da Box em relação ao <a>*/
+.box-link {
+  text-decoration: none!important;
+  color: #303183 !important;
+}
+
+.box-link img{
+  /*border: 2px solid black;*/
+  /*width: 305px;*/
+  /*height: 205px;*/
+  /*max-width: 100%;*/
+}
+
+.box-link .caption {
+  /*max-width: 100%;*/
+  color: white;
+  background-color: #303183;
+  padding: 2px 0 2px 10px;
+}
