@@ -11,7 +11,7 @@
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
   </head>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-mobile">
       <div class="container">
         <div class="navbar-header">
@@ -29,10 +29,9 @@
         <div class="collapse navbar-collapse" id="myNavbar">
         <!-- /////// -->
           <ul class="nav navbar-nav navbar-right menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Contatos</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
       </div>
@@ -78,39 +77,105 @@
 
     <section class="container" id="produtos">
       <div class="row">
-        <h1 class="col-xs-12 col-sm-12">
+        <h1 class="col-xs-12 col-sm-12 col-md-12">
           <strong>Produtos</strong>
         </h1>
       </div> <!-- .row -->
 
       <div class="row">
-        <div class="col-xs-12 col-ms-12">
+        <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
             <a href="#" class="box-link">
-              <img src="img/produtos/violao.jpg" class="img-responsive center-block" alt="Violão">
+              <div class="fundo">
+                <img src="img/produtos/violao.jpg" class="img-responsive center-block" alt="Violão">
+              </div>
               <div class="caption">
                 <h3><strong>Violões</strong></h3>
                 <p>Nylon, Aço, Infantil, Canhoto</p>
               </div>
             </a>
           </div>
-        </div> <!-- col-xs-12 col-ms-12  #violao -->
+        </div> <!-- col-xs-12 #violao -->
 
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="box aling-center">
+            <a href="#" class="box-link">
+              <div class="fundo">
+                <img src="img/produtos/guitar.jpg" class="img-responsive center-block" alt="Guitarra">
+              </div>
+              <div class="caption">
+                <h3><strong>Guitarras</strong></h3>
+                <p>Elétricas, Acústicas, Canhotas</p>
+              </div>
+            </a>
+          </div>
+        </div> <!-- col-xs-12 #guitarras -->
 
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="box aling-center">
+            <a href="#" class="box-link">
+              <div class="fundo">
+                <img src="img/produtos/baixo.jpg" class="img-responsive center-block" alt="Contra Baixos">
+              </div>
+              <div class="caption">
+                <h3><strong>Contra Baixos</strong></h3>
+                <p>Elétricos, Baixolões</p>
+              </div>
+            </a>
+          </div>
+        </div> <!-- col-xs-12 #contra baixos -->
+      </div> <!-- .row 1 -->
 
-      </div> <!-- .row -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="box aling-center">
+            <a href="#" class="box-link">
+              <div class="fundo">
+                <img src="img/produtos/pedal.png" class="img-responsive center-block" alt="Pedais">
+              </div>
+              <div class="caption">
+                <h3><strong>Pedais</strong></h3>
+                <p>Efeitos, Fontes</p>
+              </div>
+            </a>
+          </div>
+        </div> <!-- col-xs-12 #pedais -->
 
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="box aling-center">
+            <a href="#" class="box-link">
+              <div class="fundo">
+                <img src="img/produtos/ampi.jpg" class="img-responsive center-block" alt="Amplicadores">
+              </div>
+              <div class="caption">
+                <h3><strong>Amplificadores</strong></h3>
+                <p>Para Guitarras, Para Baixos</p>
+              </div>
+            </a>
+          </div>
+        </div> <!-- col-xs-12 #amplificadores -->
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="box aling-center">
+            <a href="#" class="box-link">
+              <div class="fundo">
+                <img src="img/produtos/cordas.jpg" class="img-responsive center-block" alt="Cordas">
+              </div>
+              <div class="caption">
+                <h3><strong>Cordas</strong></h3>
+                <p>Para Violões, Para Guitarras, Para Baixos</p>
+              </div>
+            </a>
+          </div>
+        </div> <!-- col-xs-12 #Cordas -->
+      </div> <!-- row 2 -->
     </section> <!-- #produtos -->
 
-    <section class="corpo">
-
-    </section>
-
-    <footer>
+    <footer id="contato">
       <div class="container">
         <div class="row">
           <h1 class="col-xs-12 text-center"><strong>Contato</strong></h1>
-          <div class="endereco col-xs-12">
+          <div class="endereco col-xs-12 col-sm-6 col-md-6">
             <div class="box">
               <p> Rua Dolan da Silva </p>
               <p> Bairro das Axilas </p>
@@ -119,7 +184,7 @@
             </div>
           </div>
 
-          <section>
+          <section id="googleMap" class="col-xs-12 col-sm-6 col-md-6">
             <!-- Aqui está -->
           </section>
         </div>
@@ -129,7 +194,7 @@
 
     <div class="finaly-footer text-center">
       <div class="container">
-        <div class="row col-xs-12">
+        <div class="row col-xs-12 col-sm-12 col-md-12">
           <p>
             2016 © Todos os direitos reservados!
           </p>
@@ -145,6 +210,6 @@
   <!-- JavaScript Bootstrap -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- API Mapa -->
-  <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="js/mapa.js"></script>
 </html>
