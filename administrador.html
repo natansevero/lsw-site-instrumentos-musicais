@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrador</title>
+    <!-- Estilo para resetar as config. dos navegadores -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+    <!-- My CSS Core -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
+  </head>
+  <body class="administrador">
+
+    <header class="container-fluid">
+      <h1 class="text-center"><strong>Administrador</strong></h1>
+    </header>
+
+    <section id="controle">
+      <div class="container">
+        <div class="row">
+          <div class="box-form">
+            <h3><strong>Inserir</strong></h3>
+            <form class="for-horizontal" role="form">
+
+                <div class="row">
+                  <label for="nome_completo" class="label-control col-xs-12 col-sm-12 col-md-12">Nome Completo: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <input type="text" class="form-control" id="nome_completo" name="nome_completo" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="cpf" class="label-control col-xs-12 col-sm-12 col-md-12" class="">CPF: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="cpf" name="cpf" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="email" class="label-control col-xs-12 col-sm-12 col-md-12" class="">E-mail: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <input type="email" class="form-control col-sm-12" id="email" name="email" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="data_nasc" class="label-control col-xs-12 col-sm-12 col-md-12" class="">Data de Nascimento: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <input type="date" class="form-control col-sm-12" id="data_nasc" name="data_nasc" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="telefone" class="label-control col-xs-12 col-sm-12 col-md-12" class="">Telefone: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="telefone" name="telefone" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <button type="submit" class="btn btn-primary col-xs-12 col-sm-12" name="Gerar">Gerar</button>
+                  </div>
+                </div>
+
+            </form>
+          </div> <!-- Inserir -->
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </section>
+
+    <div class="finaly-footer text-center">
+      <div class="container">
+        <div class="row col-xs-12 col-sm-12 col-md-12">
+          <p>
+            2016 © Todos os direitos reservados!
+          </p>
+          <span class="social"><img src="img/social/facebook.png" alt="" /></span>
+          <span class="social"><img src="img/social/twitter.png" alt="" /></span>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <!-- Biblioteca JQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- JavaScript Bootstrap -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</html>

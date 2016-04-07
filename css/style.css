@@ -66,7 +66,7 @@ body {
   }
 }
 
-header {
+header.index {
   margin-top: 80px;
 }
 
@@ -176,4 +176,34 @@ footer.finaly-footer p {
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
+}
+
+
+
+/*
+  ADMINISTRADOR.HTML
+
+  Second page
+*/
+
+.administrador header {
+  padding: 20px 0 20px 0;
+  /*border: 2px solid red !important;*/
+  background-color: #23282d !important;
+  color: white !important;
+}
+
+.administrador section#cadastro {
+  height: 1000px !important;
+}
+
+.administrador section .box-form {
+  margin-right: 10px;
+  margin-left: 10px;
+  /*border: 2px solid red !important;*/
+}
+
+.administrador section .box-form form label, .administrador section .box-form form input {
+  margin-bottom: 10px;
+  /*border: 2px solid red !important;*/
 }
