@@ -16,58 +16,162 @@
     <header class="container-fluid">
       <h1 class="text-center"><strong>Administrador</strong></h1>
     </header>
-
     <section id="controle">
       <div class="container">
+        <!-- Inserir -->
         <div class="row">
           <div class="box-form">
-            <h3><strong>Inserir</strong></h3>
+            <h3 class="text-center"><strong>Inserir</strong></h3>
             <form class="for-horizontal" role="form">
 
                 <div class="row">
-                  <label for="nome_completo" class="label-control col-xs-12 col-sm-12 col-md-12">Nome Completo: </label>
-                  <div class="col-xs-12 col-sm-12 col-md-8">
-                    <input type="text" class="form-control" id="nome_completo" name="nome_completo" required>
+                  <label for="nome_completo" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nome: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="inserir_nome" name="nome" required>
                   </div>
                 </div>
 
                 <div class="row">
-                  <label for="cpf" class="label-control col-xs-12 col-sm-12 col-md-12" class="">CPF: </label>
-                  <div class="col-xs-12 col-sm-12 col-md-8">
-                    <input type="text" class="form-control col-sm-12" id="cpf" name="cpf" required>
+                  <label for="marca" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8" class="">Marca: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="inserir_marca" name="marca" required>
                   </div>
                 </div>
 
                 <div class="row">
-                  <label for="email" class="label-control col-xs-12 col-sm-12 col-md-12" class="">E-mail: </label>
-                  <div class="col-xs-12 col-sm-12 col-md-8">
-                    <input type="email" class="form-control col-sm-12" id="email" name="email" required>
+                  <label for="preco" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8" class="">Preço: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="inserir_preco" name="preco" required>
                   </div>
                 </div>
 
                 <div class="row">
-                  <label for="data_nasc" class="label-control col-xs-12 col-sm-12 col-md-12" class="">Data de Nascimento: </label>
-                  <div class="col-xs-12 col-sm-12 col-md-8">
-                    <input type="date" class="form-control col-sm-12" id="data_nasc" name="data_nasc" required>
+                  <label for=foto class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8" class="">Foto: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="file" class="form-control col-sm-12" id="inserir_foto" name="foto" required>
                   </div>
                 </div>
 
                 <div class="row">
-                  <label for="telefone" class="label-control col-xs-12 col-sm-12 col-md-12" class="">Telefone: </label>
-                  <div class="col-xs-12 col-sm-12 col-md-8">
-                    <input type="text" class="form-control col-sm-12" id="telefone" name="telefone" required>
+                  <label for="cor" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8" class="">Cor: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="inserir_cor" name="cor" required>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-8">
-                    <button type="submit" class="btn btn-primary col-xs-12 col-sm-12" name="Gerar">Gerar</button>
+                  <label for="quantidade" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8" class="">Quantidade: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="number" class="form-control col-sm-12" id="inserir_quantidade" name="quantidade" required>
                   </div>
                 </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-4">
+                    <button type="submit" class="btn btn-success col-xs-12 col-sm-12" id="inserir_produto" name="inserir">Inserir</button>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-4">
+                    <button type="reset" class="btn btn-primary col-xs-12 col-sm-12" name="limpar">Limpar</button>
+                  </div>
+                </div>
+            </form>
+          </div> <!-- box-form -->
+        </div> <!-- row -->
+
+        <!-- Excluir -->
+        <div class="row">
+          <div class="box-form">
+            <h3 class="text-center"><strong>Excluir</strong></h3>
+            <form class="form-horizontal" role="form">
+
+              <div class="row">
+                <label for="produto" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Produto: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <input type="text" class="form-control col-sm-12" id="excluir_produto" name="produto" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="marca" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Marca: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" id="excluir_marca" name="marca" required>
+                    <option value="option">option</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="cor" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Cor: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" id="excluir_cor" name="cor" required>
+                    <option value="option">option</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="nome" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nome: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" id="excluir_nome" name="nome" required>
+                    <option value="option">option</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="preco" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Preço: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" id="excluir_preco" name="preco" required>
+                    <option value="option">option</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <button type="submit" class="btn btn-warning col-xs-12 col-sm-12" id="busca_excluir" name="buscar">Buscar</button>
+                </div>
+              <div>
+
+              <div class="row">
+                <label for="id" class="label-control col-xs-offset-2 col-xs-12 col-sm-12 col-md-offset-3 col-md-8">ID: </label>
+                <div class="col-xs-offset-2 col-xs-4 col-sm-2 col-md-offset-3 col-md-2">
+                  <input type="text" class="form-control col-sm-12" id="id_produto" name="id" required disabled>
+                </div>
+
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                  <h4>
+                    Quantidade de Itens:
+                    <span id="quantidade_itens">Os itens</span>
+                  </h4>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="quant_excluir" class="label-control col-xs-offset-2 col-xs-12 col-sm-12 col-md-offset-3 col-md-8">Quantidade a Excluir: </label>
+                <div class="col-xs-offset-2 col-xs-4 col-sm-2 col-md-offset-3 col-md-2">
+                  <input type="number" class="form-control col-sm-12" id="quantidade_excluir" name="quant_excluir" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-offset-2 col-xs-8 col-sm-12 col-md-offset-2 col-md-8">
+                  <button type="submit" class="btn btn-danger col-xs-12 col-sm-12 col-md-12" id="botao_excluir" name="botao_buscar">Excluir</button>
+                </div>
+              <div>
 
             </form>
-          </div> <!-- Inserir -->
+          </div> <!-- box-form -->
         </div> <!-- row -->
+
+        <!-- Editar -->
+        <div class="row">
+          <div class="box-form">
+            <h3 class="text-center"><strong>Editar</strong></h3>
+          </div> <!-- box-form -->
+        </div> <!-- row -->
+
       </div> <!-- container -->
     </section>
 

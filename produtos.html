@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Estilo para resetar as config. dos navegadores -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+    <!-- My CSS Core -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
+  </head>
+  <body class="comprar">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-mobile">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Adicionando Botão para quando ficar responsico -->
+            <button type="button" class="navbar-toggle button-menu-mobile" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a href="index.html" class="navbar-brand img-responsive">
+            <img src="img/logo.png" class="logo-site" alt="Logo"/>
+          </a>
+        </div>
+        <!-- Adicionado o COLLAPSE para o botão funcionar -->
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- /////// -->
+          <ul class="nav navbar-nav navbar-right menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="index">
+
+    </header>
+
+    <section class="container" id="comprar">
+
+    </section> <!-- #produtos -->
+
+    <footer id="contato">
+      <div class="container">
+        <div class="row">
+          <h1 class="col-xs-12 text-center"><strong>Contato</strong></h1>
+          <div class="endereco col-xs-12 col-sm-6 col-md-6">
+            <div class="box">
+              <p> Rua Dolan da Silva </p>
+              <p> Bairro das Axilas </p>
+              <p> Email: contato@music.com </p>
+              <p> (83) 3552-7856 </p>
+            </div>
+          </div>
+
+          <section id="googleMap" class="col-xs-12 col-sm-6 col-md-6">
+            <!-- Aqui está -->
+          </section>
+        </div>
+
+      </div>
+    </footer>
+
+    <div class="finaly-footer text-center">
+      <div class="container">
+        <div class="row col-xs-12 col-sm-12 col-md-12">
+          <p>
+            2016 © Todos os direitos reservados!
+          </p>
+          <span class="social"><img src="img/social/facebook.png" alt="" /></span>
+          <span class="social"><img src="img/social/twitter.png" alt="" /></span>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <!-- Biblioteca JQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- JavaScript Bootstrap -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- API Mapa -->
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="js/mapa.js"></script>
+</html>
