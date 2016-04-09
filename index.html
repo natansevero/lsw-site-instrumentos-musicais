@@ -30,20 +30,46 @@
         <!-- /////// -->
           <ul class="nav navbar-nav navbar-right menu">
             <li>
-                <form class="form-inline pesquisar" role="form">
-                  <input type="text" class="form-control col-xs-12 col-sm-12 col-md-12" placeholder="Pesquisar...">
-                  <button type="input" class="btn btn-warning col-xs-2 col-sm-2 col-md-4">
+                <form class="form-inline pesquisar" role="form" id="pesquisar_produto">
+                  <input type="text" class="form-control col-xs-12 col-sm-12 col-md-12" id="campo_pesquisar" placeholder="Pesquisar..." required>
+                  <button type="input" class="btn btn-warning col-xs-2 col-sm-2 col-md-4" id="botao_pesquisar_produto">
                     <span class="glyphicon glyphicon-search"></span>
                   </button>
                 </form>
             </li>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#produtos">Produtos</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- section que irá conter os filtros -->
+    <section class="esconder" id="filtro">
+      <div class="container">
+        <h3><strong>Filtrar por:</strong></h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <h4><strong>MARCA:</strong></h4>
+            <select class="form-control" id="filtar_marca">
+
+            </select>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <h4><strong>COR:</strong></h4>
+            <select class="form-control" id="filtar_cor">
+
+            </select>
+          </div>
+        </div>
+    </section>
+
+    <!-- Section que irá conter os resultados -->
+    <section class="container esconder" id="resultados">
+      
+    </section>
 
     <header class="index">
       <!-- carrosel -->
@@ -93,7 +119,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
-            <a href="produtos.html" id="violao" class="box-link">
+            <a href="#" id="violao" class="box-link">
               <div class="fundo">
                 <img src="img/produtos/violao.jpg" class="img-responsive center-block" alt="Violão">
               </div>
@@ -107,7 +133,7 @@
 
         <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
-            <a href="produtos.html" id="guitarra" class="box-link">
+            <a href="#" id="guitarra" class="box-link">
               <div class="fundo">
                 <img src="img/produtos/guitar.jpg" class="img-responsive center-block" alt="Guitarra">
               </div>
@@ -121,7 +147,7 @@
 
         <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
-            <a href="produtos.html" id="contra_baixo" class="box-link">
+            <a href="#" id="contra_baixo" class="box-link">
               <div class="fundo">
                 <img src="img/produtos/baixo.jpg" class="img-responsive center-block" alt="Contra Baixos">
               </div>
@@ -137,7 +163,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
-            <a href="produtos.html" id="pedal" class="box-link">
+            <a href="#" id="pedal" class="box-link">
               <div class="fundo">
                 <img src="img/produtos/pedal.png" class="img-responsive center-block" alt="Pedais">
               </div>
@@ -151,7 +177,7 @@
 
         <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
-            <a href="produtos.html" id="amplificador" class="box-link">
+            <a href="#" id="amplificador" class="box-link">
               <div class="fundo">
                 <img src="img/produtos/ampi.jpg" class="img-responsive center-block" alt="Amplicadores">
               </div>
@@ -165,7 +191,7 @@
 
         <div class="col-xs-12 col-sm-4 col-md-4">
           <div class="box aling-center">
-            <a href="produtos.html" id="corda" class="box-link">
+            <a href="#" id="corda" class="box-link">
               <div class="fundo">
                 <img src="img/produtos/cordas.jpg" class="img-responsive center-block" alt="Cordas">
               </div>
@@ -220,4 +246,5 @@
   <!-- API Mapa -->
   <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
   <script type="text/javascript" src="js/mapa.js"></script>
+  <script type="text/javascript" src="js/pesquisar.js"></script>
 </html>

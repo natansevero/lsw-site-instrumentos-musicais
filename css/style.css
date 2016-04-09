@@ -103,6 +103,16 @@ header.index {
   margin-top: 80px;
 }
 
+
+/* Section que irá aparecer ou desaparecer */
+section#filtro {
+  margin-top: 80px;
+  background-color:#f0ad4e !important;
+  color: black;
+  /*border: 2px solid red;*/
+  padding-bottom: 16px;
+}
+
 /* Produtos */
 section.#produtos {
   /*border: 2px solid black;*/
