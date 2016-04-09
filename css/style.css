@@ -33,6 +33,26 @@ body {
   background-color: white !important;
 }
 
+.pesquisar{
+  /*border: 2px solid red !important;*/
+  background-color: #303183;
+  padding-top: 26px !important;
+  margin-top: -8px;
+  height: 80px;
+  text-align: center !important;
+}
+
+.pesquisar input{
+  width: 200px !important;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+
+/*.menu {
+  border: 2px solid red;
+}*/
+
 .logo-site {
   width: 50px;
   height: 50px;
@@ -60,10 +80,23 @@ body {
     height: 87px;
     font-weight: bold;
     font-size: 20px;
-    padding-right: 30px !important;
-    padding-left: 30px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
     padding-top: 36px !important;
   }
+
+  .pesquisar{
+    margin-right: 20px;
+    padding-top: 30px !important;
+    width: 310px !important;
+  }
+
+  .pesquisar input{
+    margin-left: 0;
+    margin-right: 10px;
+    width: 196px !important;
+  }
+
 }
 
 header.index {
@@ -211,17 +244,10 @@ footer.finaly-footer p {
 }
 
 /*
-  PRODUTOS.HTML
-
-  Terceira Página
+  Parte Da Pesquisa
+  Classe com display: none, e etc
 */
 
-.comprar header {
-  height: 200px;
-  border: 2px solid red;
-}
-
-.comprar section {
-  height: 400px;
-  border: 2px solid orange;
+.esconder {
+    display: none;
 }
