@@ -1,7 +1,7 @@
 
 //==================================================================funcao salvar===============================================================
 
-const DB_NAME = 'instrumentos_musicais';
+const DB_BANCO_NAME = 'instrumentos_musicais';
 const DB_VERSION = 1;
 
 var db;  
@@ -9,7 +9,7 @@ var db;
 
            console.log("Abrindo transação...");
 
-           var request = indexedDB.open(DB_NAME, DB_VERSION);
+           var request = indexedDB.open(DB_BANCO_NAME, DB_VERSION);
 
            request.onsuccess = function(event){
                 db = this.result;
