@@ -22,7 +22,22 @@
         <div class="row">
           <div class="box-form">
             <h3 class="text-center"><strong>Inserir</strong></h3>
-            <form class="for-horizontal" role="form">
+            <form class="for-horizontal" role="form" id="form_inserir">
+
+              <div class="row">
+                <label for="produto" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Produto: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" id="inserir_produto" name="produto" required>
+                    <option value=""></option>
+                    <option value="violao">violao</option>
+                    <option value="guitarra">guitarra</option>
+                    <option value="contra_baixo">contra_baixo</option>
+                    <option value="pedal">pedal</option>
+                    <option value="amplificador">amplificador</option>
+                    <option value="corda">corda</option>
+                  </select>
+                </div>
+              </div>
 
                 <div class="row">
                   <label for="nome_completo" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nome: </label>
@@ -83,12 +98,20 @@
         <div class="row">
           <div class="box-form">
             <h3 class="text-center"><strong>Excluir</strong></h3>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="form_excluir">
 
               <div class="row">
                 <label for="produto" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Produto: </label>
                 <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
-                  <input type="text" class="form-control col-sm-12" id="excluir_produto" name="produto" required>
+                  <select class="form-control col-sm-12" name="produto" id="excluir_produto" required>
+                    <option value=""></option>
+                    <option value="violao">violao</option>
+                    <option value="guitarra">guitarra</option>
+                    <option value="contra_baixo">contra_baixo</option>
+                    <option value="pedal">pedal</option>
+                    <option value="amplificador">amplificador</option>
+                    <option value="corda">corda</option>
+                  </select>
                 </div>
               </div>
 
@@ -96,7 +119,7 @@
                 <label for="marca" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Marca: </label>
                 <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
                   <select class="form-control col-sm-12" id="excluir_marca" name="marca" required>
-                    <option value="option">option</option>
+
                   </select>
                 </div>
               </div>
@@ -105,7 +128,7 @@
                 <label for="cor" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Cor: </label>
                 <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
                   <select class="form-control col-sm-12" id="excluir_cor" name="cor" required>
-                    <option value="option">option</option>
+
                   </select>
                 </div>
               </div>
@@ -114,7 +137,7 @@
                 <label for="nome" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nome: </label>
                 <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
                   <select class="form-control col-sm-12" id="excluir_nome" name="nome" required>
-                    <option value="option">option</option>
+
                   </select>
                 </div>
               </div>
@@ -123,7 +146,7 @@
                 <label for="preco" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Preço: </label>
                 <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
                   <select class="form-control col-sm-12" id="excluir_preco" name="preco" required>
-                    <option value="option">option</option>
+
                   </select>
                 </div>
               </div>
@@ -137,13 +160,15 @@
               <div class="row">
                 <label for="id" class="label-control col-xs-offset-2 col-xs-12 col-sm-12 col-md-offset-3 col-md-8">ID: </label>
                 <div class="col-xs-offset-2 col-xs-4 col-sm-2 col-md-offset-3 col-md-2">
-                  <input type="text" class="form-control col-sm-12" id="id_produto" name="id" required disabled>
+                  <h4>
+                    <span id="id_produto_excluir">Aqui o ID</span>
+                  </h4>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3">
                   <h4>
                     Quantidade de Itens:
-                    <span id="quantidade_itens">Os itens</span>
+                    <span id="quantidade_itens_excluir">Os itens</span>
                   </h4>
                 </div>
               </div>
@@ -151,7 +176,9 @@
               <div class="row">
                 <label for="quant_excluir" class="label-control col-xs-offset-2 col-xs-12 col-sm-12 col-md-offset-3 col-md-8">Quantidade a Excluir: </label>
                 <div class="col-xs-offset-2 col-xs-4 col-sm-2 col-md-offset-3 col-md-2">
-                  <input type="number" class="form-control col-sm-12" id="quantidade_excluir" name="quant_excluir" required>
+                  <select class="form-control col-sm-12" name="quant_excluir" id="quantidade_excluir">
+
+                  </select>
                 </div>
               </div>
 
@@ -169,6 +196,132 @@
         <div class="row">
           <div class="box-form">
             <h3 class="text-center"><strong>Editar</strong></h3>
+
+            <form class="for-horizontal" role="form" id="form_editar">
+
+              <div class="row">
+                <label for="produto" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Produto: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" name="produto" id="editar_produto" required>
+                    <option value=""></option>
+                    <option value="violao">violao</option>
+                    <option value="guitarra">guitarra</option>
+                    <option value="contra_baixo">contra_baixo</option>
+                    <option value="pedal">pedal</option>
+                    <option value="amplificador">amplificador</option>
+                    <option value="corda">corda</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="marca" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Marca: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" name="marca" id="editar_marca" required>
+
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="cor" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Cor: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" name="cor" id="editar_cor" required>
+
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="nome" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nome: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" name="nome" id="editar_nome" required>
+
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="preco" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Preço: </label>
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <select class="form-control col-sm-12" name="preco" id="editar_preco" required>
+
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                  <button type="submit" class="btn btn-warning col-xs-12 col-sm-12" id="busca_editar" name="buscar">Buscar</button>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="id" class="label-control col-xs-offset-2 col-xs-12 col-sm-12 col-md-offset-3 col-md-8">ID: </label>
+                <div class="col-xs-offset-2 col-xs-4 col-sm-2 col-md-offset-3 col-md-2">
+                  <h4>
+                    <span id="id_produto_editar">Aqui o ID</span>
+                  </h4>
+                </div>
+
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                  <h4>
+                    Quantidade de Itens:
+                    <span id="quantidade_itens_editar">Os itens</span>
+                  </h4>
+                </div>
+              </div>
+
+              <!--<div class="row">
+                <div class="col-xs-offset-2 col-xs-8 col-sm-12 col-md-offset-2 col-md-8">
+                  <button class="btn btn-success col-xs-12 col-sm-12 col-md-12" id="botao_editar" name="botao_editar">Editar</button>
+                </div>
+              </div>-->
+            </form> <!-- Form Editar -->
+
+            <!-- Form Com os Label: NOVO -->
+            <form class="form-horizontal" role="form" id="modal_form_editar">
+              <div class="box-form">
+                <div class="row">
+                  <label for="modal_marca" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nova Marca: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_marca_editar" name="modal_marca" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="modal_nome" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Novo Nome: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_nome_editar" name="modal_nome" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="modal_cor" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nova Cor: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_cor_editar" name="modal_cor" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="modal_preco" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Novo Preço: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_preco_editar" name="modal_preco" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-4">
+                    <button type="submit" class="btn btn-success col-xs-12 col-sm-12" id="modal_botao_editar" name="modal_botao_editar">Salvar</button>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-4">
+                    <button type="reset" class="btn btn-primary col-xs-12 col-sm-12" name="limpar">Limpar</button>
+                  </div>
+                </div>
+
+              </div> <!--box-form -->
+            </form> <!--Form com label NOVO -->
+
           </div> <!-- box-form -->
         </div> <!-- row -->
 
@@ -191,5 +344,6 @@
   <!-- Biblioteca JQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <!-- JavaScript Bootstrap -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/salvar_excluir_editar.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </html>
