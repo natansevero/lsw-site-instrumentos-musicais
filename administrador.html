@@ -254,7 +254,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
                   <button type="submit" class="btn btn-warning col-xs-12 col-sm-12" id="busca_editar" name="buscar">Buscar</button>
                 </div>
-              <div>
+              </div>
 
               <div class="row">
                 <label for="id" class="label-control col-xs-offset-2 col-xs-12 col-sm-12 col-md-offset-3 col-md-8">ID: </label>
@@ -274,73 +274,53 @@
 
               <div class="row">
                 <div class="col-xs-offset-2 col-xs-8 col-sm-12 col-md-offset-2 col-md-8">
-                  <button type="submit" class="btn btn-success col-xs-12 col-sm-12 col-md-12" id="botao_editar" name="botao_editar" data-toggle="modal" data-target="#modalEditar">Editar</button>
+                  <button type="submit" class="btn btn-success col-xs-12 col-sm-12 col-md-12" id="botao_editar" name="botao_editar">Editar</button>
                 </div>
-              <div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="modalEditar" role="dialog">
-                  <div class="modal-dialog">
-
-                    <!-- Conteudo da Modal -->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <!-- X no conto superior direito -->
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Editar</h4>
-                      </div>
-                      <form class="form-horizontal" role="form" id="modal_form_ediatr">
-                        <div class="modal-body">
-
-                          <div class="row">
-                            <label for="modal_marca" class="label-control col-xs-12 col-sm-12 col-md-12">Nova Marca: </label>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                              <input type="text" class="form-control col-sm-12" id="modal_marca_editar" name="modal_marca" required>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <label for="modal_nome" class="label-control col-xs-12 col-sm-12 col-md-12">Novo Nome: </label>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                              <input type="text" class="form-control col-sm-12" id="modal_nome_editar" name="modal_nome" required>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <label for="modal_cor" class="label-control col-xs-12 col-sm-12 col-md-12">Nova Cor: </label>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                              <input type="text" class="form-control col-sm-12" id="modal_cor_editar" name="modal_cor" required>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <label for="modal_preco" class="label-control col-xs-12 col-sm-12 col-md-12">Novo Preço: </label>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                              <input type="text" class="form-control col-sm-12" id="modal_preco_editar" name="modal_preco" required>
-                            </div>
-                          </div>
-
-                        </div> <!-- Modal Body -->
-
-                        <div class="modal-footer">
-                          <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-4">
-                              <button type="submit" class="btn btn-success col-xs-12 col-sm-12" id="modal_botao_editar" name="modal_botao_editar">Salvar</button>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-4">
-                              <button type="reset" class="btn btn-primary col-xs-12 col-sm-12" name="limpar">Limpar</button>
-                            </div>
-                          </div>
-                        </div> <!-- Modal Footer -->
-
-                      </form>
-                    </div> <!-- Fim conteudo modal -->
-
-                  </div>
-                </div> <!-- Fim MODAL -->
-
+              </div>
             </form> <!-- Form Editar -->
+
+            <!-- Form Com os Label: NOVO -->
+            <form class="form-horizontal" role="form" id="modal_form_ediatr">
+              <div class="box-form">
+                <div class="row">
+                  <label for="modal_marca" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nova Marca: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_marca_editar" name="modal_marca" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="modal_nome" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Novo Nome: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_nome_editar" name="modal_nome" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="modal_cor" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Nova Cor: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_cor_editar" name="modal_cor" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="modal_preco" class="label-control col-xs-12 col-sm-12 col-md-offset-2 col-md-8">Novo Preço: </label>
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
+                    <input type="text" class="form-control col-sm-12" id="modal_preco_editar" name="modal_preco" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-4">
+                    <button type="submit" class="btn btn-success col-xs-12 col-sm-12" id="modal_botao_editar" name="modal_botao_editar">Salvar</button>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-4">
+                    <button type="reset" class="btn btn-primary col-xs-12 col-sm-12" name="limpar">Limpar</button>
+                  </div>
+                </div>
+
+              </div> <!--box-form -->
+            </form> <!--Form com label NOVO -->
 
           </div> <!-- box-form -->
         </div> <!-- row -->
