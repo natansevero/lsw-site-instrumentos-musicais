@@ -104,6 +104,10 @@ header.index {
 }
 
 
+
+
+
+
 /* Section que irá aparecer ou desaparecer */
 section#filtro {
   margin-top: 80px;
@@ -112,6 +116,10 @@ section#filtro {
   /*border: 2px solid red;*/
   padding-bottom: 16px;
 }
+
+
+
+
 
 /* Produtos */
 section.#produtos {

@@ -49,26 +49,34 @@
     <section class="esconder" id="filtro">
       <div class="container">
         <h3><strong>Filtrar por:</strong></h3>
+        <h3 id="produto_filtrado"><strong>Produto</strong></h3>
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <h4><strong>MARCA:</strong></h4>
-            <select class="form-control" id="filtar_marca">
+          <form class="form-horizontal" id="meus_filtros">
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <h4><strong>MARCA:</strong></h4>
+              <select class="form-control" id="filtar_marca">
 
-            </select>
-          </div>
+              </select>
+            </div>
 
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <h4><strong>COR:</strong></h4>
-            <select class="form-control" id="filtar_cor">
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <h4><strong>COR:</strong></h4>
+              <select class="form-control" id="filtar_cor">
 
-            </select>
-          </div>
+              </select>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <h4><strong>...</strong></h4>
+              <button type="submit" class="btn btn-success col-xs-12 col-sm-12" id="buscar_filtros" name="inserir">Filtar</button>
+            </div>
+          </form> <!-- Form -->
         </div>
     </section>
 
     <!-- Section que irá conter os resultados -->
     <section class="container esconder" id="resultados">
-      
+
     </section>
 
     <header class="index">
@@ -121,7 +129,7 @@
           <div class="box aling-center">
             <a href="#" id="violao" class="box-link">
               <div class="fundo">
-                <img src="img/produtos/violao.jpg" class="img-responsive center-block" alt="Violão">
+                <img src="img/produtos/violao.jpg" class="img-responsive center-block" alt="Violão" name="violao">
               </div>
               <div class="caption">
                 <h3><strong>Violões</strong></h3>
@@ -135,7 +143,7 @@
           <div class="box aling-center">
             <a href="#" id="guitarra" class="box-link">
               <div class="fundo">
-                <img src="img/produtos/guitar.jpg" class="img-responsive center-block" alt="Guitarra">
+                <img src="img/produtos/guitar.jpg" class="img-responsive center-block" alt="Guitarra" name="guitarra">
               </div>
               <div class="caption">
                 <h3><strong>Guitarras</strong></h3>
@@ -149,7 +157,7 @@
           <div class="box aling-center">
             <a href="#" id="contra_baixo" class="box-link">
               <div class="fundo">
-                <img src="img/produtos/baixo.jpg" class="img-responsive center-block" alt="Contra Baixos">
+                <img src="img/produtos/baixo.jpg" class="img-responsive center-block" alt="Contra Baixos" name="contra_baixo">
               </div>
               <div class="caption">
                 <h3><strong>Contra Baixos</strong></h3>
@@ -165,7 +173,7 @@
           <div class="box aling-center">
             <a href="#" id="pedal" class="box-link">
               <div class="fundo">
-                <img src="img/produtos/pedal.png" class="img-responsive center-block" alt="Pedais">
+                <img src="img/produtos/pedal.png" class="img-responsive center-block" alt="Pedais" name="pedal">
               </div>
               <div class="caption">
                 <h3><strong>Pedais</strong></h3>
@@ -179,7 +187,7 @@
           <div class="box aling-center">
             <a href="#" id="amplificador" class="box-link">
               <div class="fundo">
-                <img src="img/produtos/ampi.jpg" class="img-responsive center-block" alt="Amplicadores">
+                <img src="img/produtos/ampi.jpg" class="img-responsive center-block" alt="Amplicadores" name="amplificador">
               </div>
               <div class="caption">
                 <h3><strong>Amplificadores</strong></h3>
@@ -193,7 +201,7 @@
           <div class="box aling-center">
             <a href="#" id="corda" class="box-link">
               <div class="fundo">
-                <img src="img/produtos/cordas.jpg" class="img-responsive center-block" alt="Cordas">
+                <img src="img/produtos/cordas.jpg" class="img-responsive center-block" alt="Cordas" name="corda">
               </div>
               <div class="caption">
                 <h3><strong>Cordas</strong></h3>
