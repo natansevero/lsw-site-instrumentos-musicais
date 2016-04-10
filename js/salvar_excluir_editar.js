@@ -2,14 +2,14 @@
 //==================================================================funcao salvar===============================================================
 
 const DB_BANCO_NAME = 'instrumentos_musicais';
-const DB_VERSION = 1;
+const DB_BANCO_VERSION = 1;
 
 var db;  
 
 
            console.log("Abrindo transação...");
 
-           var request = indexedDB.open(DB_BANCO_NAME, DB_VERSION);
+           var request = indexedDB.open(DB_BANCO_NAME, DB_BANCO_VERSION);
 
            request.onsuccess = function(event){
                 db = this.result;
