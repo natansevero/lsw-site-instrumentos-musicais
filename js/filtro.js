@@ -72,22 +72,29 @@ $(".box-link").on("click", function(evt){
 
                 if (cursor) {
 
-                     var cont = 0;
+                     var cont_marca = 0;
+                     var cont_cores = 0;
                         for(var i in marcas_listadas){
-                            if(cursor.value.marca == marcas_listadas[i]){
-                                 cont++;
-                                 break;
+                            if((cursor.value.marca == marcas_listadas[i]) || (cursor.value.cor == cores_listadas[i])){
+                                 if(cursor.value.marca == marcas_listadas[i]){
+                                    cont_marca++;
+                                 }
+                                 else{
+                                    cont_cores++
+                                 }
+                                 
                             }
                         }
 
-                        if(cont == 0){
+                        if(cont_marca == 0){
 
                             var select_marca = document.createElement("option");
                             select_marca.innerHTML = cursor.value.marca;
                             var option_marca= document.getElementById("filtrar_marca");
                             option_marca.appendChild(select_marca);
-
-
+                            marcas_listadas.push(cursor.value.marca);
+                        }
+                        if(cont_cores == 0){
                             var select_cor = document.createElement("option");
                             select_cor.innerHTML = cursor.value.cor;
                             var option_cor= document.getElementById("filtrar_cor");
@@ -192,6 +199,10 @@ $("#filtrar_marca").on("change", function(event){
         transacao = db.transaction(produto);              
         store = transacao.objectStore(produto);
 
+        option_nulo("filtrar_cor");
+        
+        
+
 
         filtro_cor = document.getElementById("filtrar_cor").value;
         $("#filtrar_cor").empty();
@@ -199,34 +210,60 @@ $("#filtrar_marca").on("change", function(event){
         
         filtro_marca = document.getElementById("filtrar_marca").value;
         
-
+        var cores_listadas = [];
+        
 
         store.openCursor().onsuccess = function(event) {
             var cursor = event.target.result;
 
                 if (cursor) {
-                    if(filtro_marca == ""){      //mostra todas as cores disponiveis
-                            var select_cor = document.createElement("option");
-                            select_cor.innerHTML = cursor.value.cor;
-                            var option_cor= document.getElementById("filtrar_cor");
-                            option_cor.appendChild(select_cor);
-                            cursor.continue();
-                    }
-                    else{
-                        if(cursor.value.marca == filtro_marca){
-                            var select_cor = document.createElement("option");
-                            select_cor.innerHTML = cursor.value.cor;
-                            var option_cor= document.getElementById("filtrar_cor");
-                            option_cor.appendChild(select_cor);
-                            cursor.continue();
-                        }
-                        else{
-                            cursor.continue();
+                    var cont_cores = 0;
+                    if(filtro_marca == ""){                                  //mostra todas as cores disponiveis  sem repiticoes
+                        for(var i in cores_listadas){
+                               if(cursor.value.cor == cores_listadas[i]){
+                                    cont_cores++;
+                                    break;
+                               }
                         }
 
+                        if(cont_cores == 0){
+                            var select_cor = document.createElement("option");
+                            select_cor.innerHTML = cursor.value.cor;
+                            var option_cor= document.getElementById("filtrar_cor");
+                            option_cor.appendChild(select_cor);
+                            cores_listadas.push(cursor.value.cor);
+                        }
                     }
+
+                    else{
+                        if(cursor.value.marca == filtro_marca){
+                           for(var i in cores_listadas){
+                               if(cursor.value.cor == cores_listadas[i]){
+                                    cont_cores++;
+                                    break;
+                               }
+                            } 
+
+
+                            if(cont_cores == 0){
+                            var select_cor = document.createElement("option");
+                            select_cor.innerHTML = cursor.value.cor;
+                            var option_cor= document.getElementById("filtrar_cor");
+                            option_cor.appendChild(select_cor);
+                            cores_listadas.push(cursor.value.cor);
+                        }
+                        }
+                        
+                    }
+                
                     
-                }
+                        
+                    cursor.continue();
+                
+
+                    
+                    
+            }
                      
                
         }      
