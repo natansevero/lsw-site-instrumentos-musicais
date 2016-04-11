@@ -20,7 +20,8 @@ var request = indexedDB.open(DB_NAME, DB_VERSION);
 
 
 //--------------form-------------------
-$("#pesquisar_produto").submit(function(){
+$("#pesquisar_produto").submit(function(event){
+            event.preventDefault();
             var produto = $("#campo_pesquisar").val();
             $("section#resultados").empty();
             db.transaction(produto).onerror = function(event){
@@ -33,7 +34,7 @@ $("#pesquisar_produto").submit(function(){
                 if (cursor) {
                      var resultados = $("section#resultados");
                      
-                        resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3></div></div></div></div>");  
+                        resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3> <h3><span id='cor'>Cor: "+cursor.value.cor+"</span></h3> </div></div></div></div>");  
                              
                      
                      cursor.continue();                           
@@ -52,12 +53,13 @@ $("#pesquisar_produto").submit(function(){
 
 //----------------links das fotos-------------------
 $(".box-link").on("click", function(evt){
-
+            evt.preventDefault();
             var produto = evt.target.name;
             var produto_filtrado = document.getElementById('produto_filtrado');
             produto_filtrado.innerHTML = produto;               //deve ser informada a tabela.
             
-            
+            option_nulo("filtrar_marca");
+            option_nulo("filtrar_cor");
             
             transacao = db.transaction(produto);              
             store = transacao.objectStore(produto);
@@ -95,7 +97,7 @@ $(".box-link").on("click", function(evt){
                         }
 
                             var resultados = $("section#resultados");
-                            resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3></div></div></div></div>");  
+                            resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3> <h3><span id='cor'>Cor: "+cursor.value.cor+"</span></h3> </div></div></div></div>");  
                              
                      
                      cursor.continue();                  		  
@@ -119,7 +121,7 @@ function option_nulo(campo){
 
 
 $("#meus_filtros").submit(function(event){
-
+        event.preventDefault();
         var produto = $('#produto_filtrado').html();
 
         transacao = db.transaction(produto);              
@@ -139,21 +141,21 @@ $("#meus_filtros").submit(function(event){
                 if (cursor) {
                      if((filtro_cor == "") && (filtro_marca =="")){       //filtros vazio = seta tudo da tabela no banco
                                  var resultados = $("section#resultados");
-                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3></div></div></div></div>");         
+                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3> <h3><span id='cor'>Cor: "+cursor.value.cor+"</span></h3> </div></div></div></div>");         
                      }
 
 
                      else if((filtro_cor != "") && (filtro_marca !="")){       //duplo filtro
                             if((cursor.value.marca == filtro_marca) && (cursor.value.cor == filtro_cor)){     
                                  var resultados = $("section#resultados");
-                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3></div></div></div></div>"); 
+                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3> <h3><span id='cor'>Cor: "+cursor.value.cor+"</span></h3> </div></div></div></div>"); 
                             }        
                      }
 
                      else if((filtro_cor != "") && (filtro_marca =="")){       //filtro por cor
                             if(cursor.value.cor == filtro_cor){     
                                  var resultados = $("section#resultados");
-                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3></div></div></div></div>"); 
+                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3> <h3><span id='cor'>Cor: "+cursor.value.cor+"</span></h3> </div></div></div></div>"); 
                             }        
                      }
 
@@ -161,7 +163,7 @@ $("#meus_filtros").submit(function(event){
                      else if((filtro_cor == "") && (filtro_marca !="")){       //filtro por marca
                             if(cursor.value.marca == filtro_marca){     
                                  var resultados = $("section#resultados");
-                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3></div></div></div></div>"); 
+                                 resultados.append("<div class='col-xs-12 col-sm-4 col-md-4'><div class='box aling-center'><div class='box-link'><div class='fundo'><img src='img/produtos/"+cursor.value.foto+"' class='img-responsive center-block'></div><div class='caption'><h3><strong>"+cursor.value.marca+"<span id='marca'></span></strong></h3><h3><span id='preco'>R$"+cursor.value.preco+"</span></h3> <h3><span id='cor'>Cor: "+cursor.value.cor+"</span></h3> </div></div></div></div>"); 
                             }        
                      }
 
@@ -182,7 +184,7 @@ $("#meus_filtros").submit(function(event){
 
 
 $("#filtrar_marca").on("change", function(event){
-         
+         event.preventDefault();
         var produto = $('#produto_filtrado').html();
                
 
